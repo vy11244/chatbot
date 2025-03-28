@@ -1,0 +1,107 @@
+/* ChatbotWidget.module.css */
+.headerAvatar {
+  max-width: 40px; /* Adjust the size as needed */
+  max-height: 40px; /* Adjust the size as needed */
+  border-radius: 50%;
+}
+
+.messageAvatar {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  margin-right: 8px !important;
+  object-fit: cover !important;
+}
+
+.headerTitle {
+  font-size: 16px;
+  font-weight: 500;
+  /* Remove the color property to use the default color */
+}
+
+.closeButton {
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  margin-left: auto;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.widgetContainer {
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  z-index: 1000;
+}
+
+.chatWindow {
+  width: 400px;  /* Tăng từ kích thước mặc định */
+  height: 500px; /* Tăng từ kích thước mặc định */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerAvatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.headerTitle {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+.chatButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 139, 230, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 139, 230, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 139, 230, 0);
+  }
+}
+
+.chatButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chatWindow > div:last-child {
+  flex: 1;
+  height: calc(100% - 60px); /* Trừ đi chiều cao của header */
+}

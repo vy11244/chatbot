@@ -1,0 +1,43 @@
+/* src/components/Header/style.module.css */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: rgb(81, 82, 86);
+    border-bottom: 1px solid #eee;
+  }
+  
+  .backButton {
+    min-width: 100px;
+    height: 36px;
+    justify-self: flex-start;
+  }
+  
+  .tabGroup {
+    justify-self: center;
+  }
+  
+  .tab {
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+  color: #000000; /* Add this line for black text */
+}
+
+.activeTab {
+  font-weight: bold;
+  border-bottom: 2px solid #228be6;
+  color: #000000; /* Add this line for black text */
+}
+  .publishButton {
+    min-width: 100px;
+    height: 36px;
+    justify-self: flex-end;
+  }
+  
+  .publishButton:disabled, .backButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
